@@ -12,5 +12,6 @@ jobs:
       - name: Set up Semgrep
         uses: returntocorp/semgrep-action@v1
         with:
-          config: p/owasp-top-ten
+          config: .semgrep.yml
+          args: 'vulnerableapp/sqlinjection.ts --verbose'
         continue-on-error: true
