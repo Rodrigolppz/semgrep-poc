@@ -1,0 +1,15 @@
+name: Semgrep SAST Scan
+
+on: [push, pull_request]
+
+jobs:
+  semgrep:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Semgrep
+        uses: returntocorp/semgrep-action@v1
+        with:
+          config: p/owasp-top-ten
