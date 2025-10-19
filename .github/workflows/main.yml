@@ -13,5 +13,5 @@ jobs:
         uses: returntocorp/semgrep-action@v1
         with:
           config: .semgrep.yml
-          args: 'vulnerableapp/sqlinjection.ts --verbose'
+          args: --include vulnerableapp/sqlinjection.ts --verbose
         continue-on-error: true
