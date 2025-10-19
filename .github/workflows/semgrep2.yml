@@ -1,0 +1,21 @@
+name: Semgrep SAST Scan - single file
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  semgrep:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Run Semgrep on a single file
+        uses: returntocorp/semgrep-action@v1
+        with:
+          config: .semgrep.yml
+          paths: vulnerableapp/sqlinjection.ts
+          verbose: true
