@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/Rodrigolppz/semgrep-poc/issues"
   },
-  "homepage": "https://github.com/Rodrigolppz/semgrep-poc#readme"
+  "homepage": "https://github.com/Rodrigolppz/semgrep-poc#readme",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
 }
